@@ -35,22 +35,25 @@ portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
-  - name: Massachusetts Institute of Technology
-    logo: /assets/images/badges/MIT_Social_circle.png
+  - name: East China Normal University
+    logo: /assets/images/badges/ECNU.png
     position: >-
-      Department of Electrical Engineering and Computer Science <br/>
-      Ph.D. Student
-    date: Sep. 2024 - present
-  - name: Peking University
-    logo: /assets/images/badges/PKU_red.png
-    position: B.S. in Computer Science
-    date: Sep. 2019 - Jul. 2021
+      School of Computer Science and Technology <br/>
+      M.S. Student
+    date: Sep. 2025 - present
 
-# experience:
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: Research Intern
-#   date: Sep. 2019 - Jul. 2021
+  - name: Shanghai Maritime University
+    logo: /assets/images/badges/SMU.png
+    position: >-
+      College of Information Engineering <br/>
+      B.S.
+    date: Sep. 2021 - Jun. 2025
+
+experience:
+  - name: Zhejiang University
+    position: >-
+      Research Assistant
+    date: Sep.2024 - Sep. 2025
 
 awards:
   - name: Award Name 2
