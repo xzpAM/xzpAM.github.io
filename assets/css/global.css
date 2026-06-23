@@ -764,16 +764,21 @@ footer small {
    Smaller circular profile portrait
    ========================================================= */
 
+/* =========================================================
+   Rounded-square profile portrait
+   ========================================================= */
+
+/* 只处理个人头像，不影响论文图片、项目图片 */
 .portrait,
 .profile-img,
 img.portrait,
 img.profile-img,
 .card img[src*="/assets/images/photos/"] {
-    width: 180px !important;
-    height: 180px !important;
+    width: 190px !important;
+    height: 190px !important;
     aspect-ratio: 1 / 1;
 
-    border-radius: 50% !important;
+    border-radius: 1.4rem !important;
     object-fit: cover !important;
     object-position: center center;
 
@@ -784,9 +789,9 @@ img.profile-img,
 
     padding: 4px;
     background: #000000;
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.20);
 
     box-shadow:
         0 16px 36px rgba(0, 0, 0, 0.82),
-        0 0 14px rgba(255, 255, 255, 0.08);
+        0 0 14px rgba(255, 255, 255, 0.06);
 }
