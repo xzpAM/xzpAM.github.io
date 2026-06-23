@@ -1,93 +1,887 @@
-@charset "utf-8";
+/* =========================================================
+   Global CSS - Black Tech Robotics Academic Theme
+   Target file: assets/css/global.css
+   ========================================================= */
+
+/* ------------------------------
+   1. Theme variables
+   ------------------------------ */
+
+:root {
+    --tech-black: #05080d;
+    --tech-black-2: #080d15;
+    --tech-dark: #0b111c;
+    --tech-card: #101827;
+    --tech-card-2: #121d2f;
+    --tech-card-3: #162238;
+
+    --tech-blue: #2ea3f2;
+    --tech-blue-2: #1e5aa8;
+    --tech-cyan: #35d0ff;
+    --tech-cyan-soft: rgba(53, 208, 255, 0.14);
+
+    --tech-text: #e7eef8;
+    --tech-text-soft: #cbd6e5;
+    --tech-muted: #9aa8ba;
+    --tech-muted-2: #748196;
+
+    --tech-border: rgba(74, 163, 255, 0.22);
+    --tech-border-strong: rgba(53, 208, 255, 0.45);
+
+    --tech-shadow: rgba(0, 0, 0, 0.45);
+    --tech-glow: rgba(46, 163, 242, 0.28);
+    --tech-glow-strong: rgba(53, 208, 255, 0.55);
+
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.25rem;
+
+    --transition-fast: 0.18s ease;
+    --transition-normal: 0.25s ease;
+}
+
+/* ------------------------------
+   2. Global base
+   ------------------------------ */
+
+html {
+    min-height: 100%;
+    background: var(--tech-black);
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    padding-top: 5.0rem;
+    min-height: 100vh;
+    color: var(--tech-text) !important;
+    background:
+        radial-gradient(circle at 12% 8%, rgba(46, 163, 242, 0.16), transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(53, 208, 255, 0.12), transparent 26%),
+        radial-gradient(circle at 50% 100%, rgba(30, 90, 168, 0.16), transparent 34%),
+        linear-gradient(180deg, #05080d 0%, #08111e 48%, #05080d 100%) !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.65;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+/* Background grid */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+        linear-gradient(rgba(46, 163, 242, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(46, 163, 242, 0.055) 1px, transparent 1px);
+    background-size: 34px 34px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.15));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.15));
+}
+
+/* Selection */
+::selection {
+    color: #ffffff;
+    background: rgba(46, 163, 242, 0.65);
+}
+
+::-moz-selection {
+    color: #ffffff;
+    background: rgba(46, 163, 242, 0.65);
+}
+
+/* ------------------------------
+   3. Typography
+   ------------------------------ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--tech-text) !important;
     font-weight: 700;
+    letter-spacing: -0.01em;
 }
 
-.card {
-    border-radius: 0.8rem!important;
+h1 {
+    font-size: 2.2rem;
+    line-height: 1.25;
 }
 
-.card-img-overlay {
-    border-radius: 0.8rem!important;
+h2 {
+    font-size: 1.65rem;
+    line-height: 1.32;
 }
 
-.rounded-xl {
-    border-radius: 0.8rem!important;
+h3 {
+    font-size: 1.35rem;
 }
 
-.rounded-xl-bottom {
-    border-bottom-right-radius: 0.8rem !important;
-    border-bottom-left-radius: 0.8rem !important;
+h4 {
+    font-size: 1.15rem;
 }
 
-.rounded-xl-top {
-    border-top-left-radius: 0.8rem !important;
-    border-top-right-radius: 0.8rem !important;
+h1::after,
+h2::after {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 3px;
+    margin-top: 0.55rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--tech-blue), var(--tech-cyan));
+    box-shadow: 0 0 14px rgba(53, 208, 255, 0.55);
 }
 
+p {
+    color: var(--tech-text-soft);
+}
 
-.text-profile-position {
-    font-weight: 400;
+small,
+.text-muted {
+    color: var(--tech-muted) !important;
+}
+
+strong,
+b {
+    color: #ffffff;
+}
+
+em,
+i {
+    color: var(--tech-text-soft);
+}
+
+hr {
+    border-color: rgba(53, 208, 255, 0.18) !important;
+}
+
+/* ------------------------------
+   4. Links
+   ------------------------------ */
+
+a {
+    color: var(--tech-cyan) !important;
+    transition: color var(--transition-fast), text-shadow var(--transition-fast);
+}
+
+a:hover,
+a:focus {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    text-shadow: 0 0 10px rgba(53, 208, 255, 0.65);
+}
+
+/* ------------------------------
+   5. Navbar
+   ------------------------------ */
+
+.navbar {
+    background: rgba(5, 8, 13, 0.9) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--tech-border);
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45) !important;
+}
+
+.navbar-brand,
+.navbar-brand strong {
+    color: var(--tech-text) !important;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.navbar-brand strong::before {
+    content: "\f544";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 0.55rem;
+    color: var(--tech-cyan);
+    text-shadow: 0 0 12px rgba(53, 208, 255, 0.72);
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-nav .nav-link {
+    color: var(--tech-muted) !important;
+    font-weight: 600;
+    border-radius: 999px;
+    padding-left: 0.9rem !important;
+    padding-right: 0.9rem !important;
+    transition: all var(--transition-fast);
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, rgba(46, 163, 242, 0.95), rgba(53, 208, 255, 0.9));
+    box-shadow: 0 0 18px rgba(46, 163, 242, 0.42);
+}
+
+.navbar-toggler {
+    border-color: rgba(53, 208, 255, 0.35) !important;
+    background: rgba(53, 208, 255, 0.06);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(53, 208, 255, 0.25) !important;
+}
+
+/* ------------------------------
+   6. Layout containers
+   ------------------------------ */
+
+.container,
+.container-fluid {
+    position: relative;
+}
+
+main,
+.page-content {
+    position: relative;
+}
+
+/* ------------------------------
+   7. Cards and blocks
+   ------------------------------ */
+
+.card,
+.bg-white,
+.shadow-sm,
+.rounded-xl,
+.my-0.p-0.bg-white {
+    background: linear-gradient(180deg, rgba(16, 24, 39, 0.96), rgba(10, 17, 28, 0.96)) !important;
+    border: 1px solid var(--tech-border) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow:
+        0 18px 42px rgba(0, 0, 0, 0.42),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035) !important;
+    color: var(--tech-text) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before,
+.bg-white.shadow-sm::before,
+.my-0.p-0.bg-white::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--tech-blue), var(--tech-cyan));
+    box-shadow: 0 0 16px rgba(53, 208, 255, 0.65);
+    opacity: 0.95;
+}
+
+.card:hover,
+.bg-white.shadow-sm:hover,
+.my-0.p-0.bg-white:hover {
+    transform: translateY(-3px);
+    transition: all var(--transition-fast);
+    border-color: var(--tech-border-strong) !important;
+    box-shadow:
+        0 24px 56px rgba(0, 0, 0, 0.52),
+        0 0 24px rgba(46, 163, 242, 0.15) !important;
+}
+
+.card-body {
+    color: var(--tech-text-soft);
+}
+
+.card-title {
+    color: var(--tech-text) !important;
+}
+
+.card-subtitle {
+    color: var(--tech-muted) !important;
+}
+
+/* Bootstrap white utilities override */
+.text-dark {
+    color: var(--tech-text) !important;
+}
+
+.bg-light {
+    background: rgba(16, 24, 39, 0.92) !important;
+}
+
+.border {
+    border-color: var(--tech-border) !important;
+}
+
+/* ------------------------------
+   8. Buttons and badges
+   ------------------------------ */
+
+.btn,
+.badge {
+    border-radius: 999px !important;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.btn-primary,
+.badge-primary {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, var(--tech-blue), var(--tech-cyan)) !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 18px rgba(46, 163, 242, 0.32);
+}
+
+.btn-primary:hover,
+.badge-primary:hover {
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 0 24px rgba(53, 208, 255, 0.52);
+}
+
+.btn-outline-primary {
+    color: var(--tech-cyan) !important;
+    border-color: rgba(53, 208, 255, 0.62) !important;
+    background: rgba(53, 208, 255, 0.04) !important;
+}
+
+.btn-outline-primary:hover {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, var(--tech-blue), var(--tech-cyan)) !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 18px rgba(53, 208, 255, 0.45);
+}
+
+.badge-secondary {
+    color: var(--tech-text) !important;
+    background: rgba(154, 168, 186, 0.18) !important;
+    border: 1px solid rgba(154, 168, 186, 0.18);
+}
+
+.badge-light {
+    color: var(--tech-cyan) !important;
+    background: rgba(53, 208, 255, 0.08) !important;
+    border: 1px solid rgba(53, 208, 255, 0.18);
+}
+
+/* ------------------------------
+   9. Profile area
+   ------------------------------ */
+
+.portrait,
+.profile-img,
+img.portrait {
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid rgba(53, 208, 255, 0.25);
+    box-shadow:
+        0 16px 38px rgba(0, 0, 0, 0.42),
+        0 0 20px rgba(46, 163, 242, 0.12);
+}
+
+.text-profile-position,
+.profile-position {
+    color: var(--tech-muted) !important;
 }
 
 .text-profile-bio {
-    /* font-family: "Raleway"; */
-    font-weight: 400;
-}
-
-.navbar {
-    background-color: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-}
-
-.inline-badge {
-    height: 16px;
-    vertical-align: -10%;
-    margin-right: 2px;
-    line-break: unset;
-}
-
-.no-break {
-    white-space: nowrap;
-}
-
-.cover-image {
-    width: 180px;
-    max-height: 120px;
-}
-
-.abstract-body {
-    min-height: 100px;
-}
-
-img.lazy {
-    background-image: url('images/loading.gif');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 50px 50px;
-    min-height: 80px;
-}
-
-div.lazy {
-    background-image: url('images/loading.gif');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 50px 50px;
-    min-height: 80px;
-}
-
-.badge-publication {
-    font-size: 100%;
+    color: var(--tech-text-soft) !important;
+    line-height: 1.78;
 }
 
 .email-text {
-    font-family: Source Code Pro, monospace;
+    color: var(--tech-cyan) !important;
+    background: rgba(53, 208, 255, 0.09);
+    padding: 0.12rem 0.4rem;
+    border-radius: 0.4rem;
+    border: 1px solid rgba(53, 208, 255, 0.18);
+}
+
+/* Social icons */
+.fa-brands,
+.fab,
+.fa-solid,
+.fas,
+.ai {
+    color: var(--tech-cyan) !important;
+    transition: color var(--transition-fast), filter var(--transition-fast), transform var(--transition-fast);
+}
+
+.fa-brands:hover,
+.fab:hover,
+.fa-solid:hover,
+.fas:hover,
+.ai:hover {
+    color: #ffffff !important;
+    filter: drop-shadow(0 0 8px rgba(53, 208, 255, 0.72));
+    transform: translateY(-1px);
+}
+
+/* ------------------------------
+   10. Images
+   ------------------------------ */
+
+img {
+    max-width: 100%;
+}
+
+.cover-image,
+.publication-cover img,
+.showcase-cover img {
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(53, 208, 255, 0.22);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+img[alt] {
+    color: var(--tech-muted);
+}
+
+/* ------------------------------
+   11. Publications
+   ------------------------------ */
+
+.publication-title,
+.pub-title {
+    color: var(--tech-text) !important;
+    font-weight: 700;
+}
+
+.publication-authors,
+.pub-authors {
+    color: var(--tech-text-soft) !important;
+}
+
+.publication-venue,
+.pub-venue {
+    color: var(--tech-cyan) !important;
+    font-weight: 600;
+}
+
+.publication-abstract,
+.pub-abstract {
+    color: var(--tech-muted) !important;
+}
+
+.pub-button,
+.publication-button {
+    border-radius: 999px !important;
+}
+
+/* Generic publication item spacing */
+.publication,
+.publication-item {
+    color: var(--tech-text-soft);
+}
+
+/* Year title on publications page */
+h2[id^="year-"] {
+    color: var(--tech-text) !important;
+    padding-top: 1.5rem;
+}
+
+/* ------------------------------
+   12. News / Experience / Lists
+   ------------------------------ */
+
+ul,
+ol {
+    color: var(--tech-text-soft);
+}
+
+li {
+    color: var(--tech-text-soft);
+}
+
+li::marker {
+    color: var(--tech-cyan);
+}
+
+.list-unstyled li {
+    color: var(--tech-text-soft);
+}
+
+.news-title,
+.experience-title {
+    color: var(--tech-text) !important;
+}
+
+.news-date,
+.experience-date {
+    color: var(--tech-cyan) !important;
+}
+
+/* ------------------------------
+   13. Tables
+   ------------------------------ */
+
+table,
+.table {
+    color: var(--tech-text-soft) !important;
+    background: rgba(16, 24, 39, 0.7);
+    border-color: rgba(53, 208, 255, 0.16) !important;
+}
+
+.table td,
+.table th,
+td,
+th {
+    border-color: rgba(53, 208, 255, 0.16) !important;
+}
+
+thead th {
+    color: var(--tech-text) !important;
+    background: rgba(53, 208, 255, 0.08);
+}
+
+/* ------------------------------
+   14. Forms
+   ------------------------------ */
+
+input,
+textarea,
+select,
+.form-control {
+    color: var(--tech-text) !important;
+    background: rgba(10, 17, 28, 0.92) !important;
+    border: 1px solid rgba(53, 208, 255, 0.22) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.form-control:focus {
+    color: var(--tech-text) !important;
+    background: rgba(10, 17, 28, 0.96) !important;
+    border-color: rgba(53, 208, 255, 0.58) !important;
+    box-shadow: 0 0 0 0.15rem rgba(53, 208, 255, 0.18) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--tech-muted-2) !important;
+}
+
+/* ------------------------------
+   15. Code blocks
+   ------------------------------ */
+
+code {
+    color: var(--tech-cyan);
+    background: rgba(53, 208, 255, 0.08);
+    border-radius: 0.35rem;
+    padding: 0.12rem 0.28rem;
+}
+
+pre {
+    color: var(--tech-text-soft);
+    background: rgba(5, 8, 13, 0.92);
+    border: 1px solid rgba(53, 208, 255, 0.18);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+pre code {
+    color: var(--tech-text-soft);
+    background: transparent;
+    padding: 0;
+}
+
+/* ------------------------------
+   16. Blockquote
+   ------------------------------ */
+
+blockquote {
+    color: var(--tech-text-soft);
+    background: rgba(53, 208, 255, 0.06);
+    border-left: 4px solid var(--tech-cyan);
+    border-radius: var(--radius-sm);
+    padding: 0.85rem 1rem;
+}
+
+/* ------------------------------
+   17. Robotics hero block for homepage
+   Use this with optional HTML block in index.html
+   ------------------------------ */
+
+.robot-hero {
+    position: relative;
+    padding: 2.2rem;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 82% 18%, rgba(53, 208, 255, 0.36), transparent 28%),
+        linear-gradient(135deg, #08111e 0%, #0f2747 52%, #07101b 100%);
+    border: 1px solid rgba(53, 208, 255, 0.28);
+    box-shadow:
+        0 24px 64px rgba(0, 0, 0, 0.46),
+        0 0 28px rgba(46, 163, 242, 0.18);
+}
+
+.robot-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(53, 208, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(53, 208, 255, 0.08) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.6;
+}
+
+.robot-hero::after {
+    content: "\f544";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 2rem;
+    bottom: -0.8rem;
+    font-size: 7rem;
+    color: rgba(255, 255, 255, 0.11);
+    text-shadow: 0 0 24px rgba(53, 208, 255, 0.42);
+}
+
+.robot-hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+}
+
+.robot-kicker {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--tech-cyan);
+    background: rgba(53, 208, 255, 0.08);
+    border: 1px solid rgba(53, 208, 255, 0.24);
+}
+
+.robot-hero h1 {
+    color: #ffffff !important;
+    font-size: 2.15rem;
+    line-height: 1.22;
+    margin-bottom: 0.85rem;
+}
+
+.robot-hero h1::after {
+    background: linear-gradient(90deg, var(--tech-cyan), #ffffff);
+}
+
+.robot-hero p {
+    color: rgba(231, 238, 248, 0.88) !important;
+    margin-bottom: 0;
+    font-size: 1.02rem;
+}
+
+/* ------------------------------
+   18. Research tags / keyword chips
+   Optional classes
+   ------------------------------ */
+
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 1rem;
+}
+
+.research-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    color: var(--tech-cyan);
+    background: rgba(53, 208, 255, 0.08);
+    border: 1px solid rgba(53, 208, 255, 0.22);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.research-tag::before {
+    content: "";
+    width: 0.42rem;
+    height: 0.42rem;
+    border-radius: 50%;
+    background: var(--tech-cyan);
+    box-shadow: 0 0 10px rgba(53, 208, 255, 0.75);
+}
+
+/* ------------------------------
+   19. Footer
+   ------------------------------ */
+
+footer {
+    color: var(--tech-muted) !important;
+    border-top: 1px solid rgba(53, 208, 255, 0.12);
+    background: rgba(5, 8, 13, 0.5);
+}
+
+footer p,
+footer small,
+footer span {
+    color: var(--tech-muted) !important;
+}
+
+/* ------------------------------
+   20. Utilities
+   ------------------------------ */
+
+.rounded-xl {
+    border-radius: var(--radius-lg) !important;
+}
+
+.shadow-sm {
+    box-shadow:
+        0 18px 42px rgba(0, 0, 0, 0.42),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035) !important;
+}
+
+.border-bottom {
+    border-bottom-color: rgba(53, 208, 255, 0.16) !important;
+}
+
+.border-top {
+    border-top-color: rgba(53, 208, 255, 0.16) !important;
+}
+
+.alert {
+    color: var(--tech-text) !important;
+    background: rgba(53, 208, 255, 0.08) !important;
+    border-color: rgba(53, 208, 255, 0.24) !important;
+    border-radius: var(--radius-md);
+}
+
+.alert-warning {
+    color: #ffe8a3 !important;
+    background: rgba(255, 193, 7, 0.08) !important;
+    border-color: rgba(255, 193, 7, 0.26) !important;
+}
+
+.alert-danger {
+    color: #ffb4b4 !important;
+    background: rgba(220, 53, 69, 0.08) !important;
+    border-color: rgba(220, 53, 69, 0.26) !important;
+}
+
+/* ------------------------------
+   21. Scrollbar
+   ------------------------------ */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #05080d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(53, 208, 255, 0.35);
+    border-radius: 999px;
+    border: 2px solid #05080d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(53, 208, 255, 0.58);
+}
+
+/* ------------------------------
+   22. Responsive
+   ------------------------------ */
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 1.95rem;
+    }
+
+    h2 {
+        font-size: 1.45rem;
+    }
+
+    .robot-hero {
+        padding: 1.75rem;
+    }
+
+    .robot-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .robot-hero::after {
+        font-size: 5.5rem;
+        right: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        line-height: 1.62;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .navbar-nav .nav-link {
+        margin-top: 0.3rem;
+    }
+
+    h1::after,
+    h2::after {
+        width: 46px;
+    }
+
+    .card,
+    .bg-white,
+    .shadow-sm,
+    .rounded-xl,
+    .my-0.p-0.bg-white {
+        border-radius: 0.85rem !important;
+    }
+
+    .robot-hero {
+        padding: 1.35rem;
+    }
+
+    .robot-hero h1 {
+        font-size: 1.55rem;
+    }
+
+    .robot-hero p {
+        font-size: 0.95rem;
+    }
+
+    .robot-hero::after {
+        font-size: 4.4rem;
+        right: 0.8rem;
+        bottom: -0.5rem;
+    }
+
+    .research-tags {
+        gap: 0.4rem;
+    }
+
+    .research-tag {
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.65rem;
+    }
+
+    h2 {
+        font-size: 1.32rem;
+    }
+
+    .robot-kicker {
+        font-size: 0.74rem;
+    }
 }
