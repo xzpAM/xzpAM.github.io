@@ -1,0 +1,27 @@
+intro:
+  title: "Gallery"
+  file: "welcome.md"
+  description: "Research life · Sports · Travel · Gaming"
+
+groups:
+  - name: "Research Life"
+    folder: "research-life"
+    items:
+      - /assets/images/showcase/research/research-01.jpg
+
+  - name: "Sports"
+    folder: "sports"
+    items:
+      - /assets/images/showcase/sports/sports-01.jpg
+
+
+  - name: "Travel"
+    folder: "travel"
+    items:
+      - /assets/images/showcase/travel/travel-01.jpg
+
+
+  - name: "Gaming"
+    folder: "gaming"
+    items:
+      - /assets/images/showcase/gaming/gaming-01.jpg
