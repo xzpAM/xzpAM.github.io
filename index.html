@@ -11,15 +11,86 @@ navbar_title: Home
 
     <div class="col-lg-9 col-md-8">
 
-        <!-- Robotics Hero Section -->
+        <!-- Humanoid Robotics Hero Section -->
         <div class="robot-hero mb-4">
             <div class="robot-hero-text">
                 <div class="robot-kicker">Robotics · Embodied AI · Intelligent Systems</div>
+
                 <h1>Building intelligent robotic systems that perceive, reason, and act.</h1>
+
                 <p>
-                    My research focuses on robotic perception, embodied intelligence,
-                    multimodal learning, and learning-based control for real-world autonomy.
+                    My research focuses on robotics, embodied intelligence, multimodal perception,
+                    and learning-based control for real-world autonomous systems.
                 </p>
+
+                <div class="research-tags">
+                    <span class="research-tag">Robot Learning</span>
+                    <span class="research-tag">Embodied AI</span>
+                    <span class="research-tag">Multimodal Perception</span>
+                    <span class="research-tag">Autonomous Systems</span>
+                </div>
+            </div>
+
+            <div class="robot-figure">
+                <svg viewBox="0 0 260 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Head -->
+                    <rect class="robot-outline" x="90" y="25" rx="26" ry="26" width="80" height="88" />
+                    <rect class="robot-core" x="105" y="45" rx="18" ry="18" width="50" height="40" />
+                    <circle class="robot-eye" cx="118" cy="66" r="5" />
+                    <circle class="robot-eye" cx="142" cy="66" r="5" />
+                    <rect class="robot-core" x="116" y="82" rx="4" ry="4" width="28" height="8" />
+
+                    <!-- Antenna -->
+                    <line class="robot-outline" x1="130" y1="25" x2="130" y2="5" />
+                    <circle class="robot-eye" cx="130" cy="4" r="4" />
+
+                    <!-- Neck -->
+                    <rect class="robot-core" x="118" y="112" width="24" height="18" rx="6" />
+
+                    <!-- Chest -->
+                    <path class="robot-outline" d="M80 135 L180 135 L195 220 L65 220 Z" />
+                    <rect class="robot-core" x="102" y="154" width="56" height="38" rx="10" />
+                    <circle class="robot-joint" cx="130" cy="173" r="8" />
+                    <rect class="robot-core" x="112" y="198" width="36" height="10" rx="5" />
+
+                    <!-- Shoulders -->
+                    <circle class="robot-joint" cx="70" cy="150" r="12" />
+                    <circle class="robot-joint" cx="190" cy="150" r="12" />
+
+                    <!-- Left Arm -->
+                    <line class="robot-outline" x1="70" y1="150" x2="42" y2="215" />
+                    <circle class="robot-joint" cx="42" cy="215" r="11" />
+                    <line class="robot-outline" x1="42" y1="215" x2="55" y2="302" />
+                    <circle class="robot-joint" cx="55" cy="302" r="10" />
+                    <line class="robot-outline" x1="55" y1="302" x2="45" y2="370" />
+
+                    <!-- Right Arm -->
+                    <line class="robot-outline" x1="190" y1="150" x2="218" y2="215" />
+                    <circle class="robot-joint" cx="218" cy="215" r="11" />
+                    <line class="robot-outline" x1="218" y1="215" x2="205" y2="302" />
+                    <circle class="robot-joint" cx="205" cy="302" r="10" />
+                    <line class="robot-outline" x1="205" y1="302" x2="215" y2="370" />
+
+                    <!-- Waist -->
+                    <rect class="robot-outline" x="92" y="220" width="76" height="38" rx="16" />
+                    <rect class="robot-core" x="108" y="232" width="44" height="14" rx="7" />
+
+                    <!-- Hips -->
+                    <circle class="robot-joint" cx="106" cy="258" r="10" />
+                    <circle class="robot-joint" cx="154" cy="258" r="10" />
+
+                    <!-- Left Leg -->
+                    <line class="robot-outline" x1="106" y1="258" x2="92" y2="350" />
+                    <circle class="robot-joint" cx="92" cy="350" r="11" />
+                    <line class="robot-outline" x1="92" y1="350" x2="86" y2="445" />
+                    <rect class="robot-core" x="66" y="445" width="38" height="16" rx="8" />
+
+                    <!-- Right Leg -->
+                    <line class="robot-outline" x1="154" y1="258" x2="168" y2="350" />
+                    <circle class="robot-joint" cx="168" cy="350" r="11" />
+                    <line class="robot-outline" x1="168" y1="350" x2="174" y2="445" />
+                    <rect class="robot-core" x="156" y="445" width="38" height="16" rx="8" />
+                </svg>
             </div>
         </div>
 
@@ -38,11 +109,9 @@ navbar_title: Home
 
         {% if site.data.display.homepage.show_selected_publications %}
         {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
-        {%
-        include widgets/publication_card.html
-        publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
-        %}
+        {% include widgets/publication_card.html publications=pubs title='<i class="fas fa-star"></i> Selected
+        Publications' %}
         {% endif %}
+
     </div>
 </div>
