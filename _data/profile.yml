@@ -20,16 +20,16 @@ orcid: 0009-0002-7783-3951
 
 short_bio_text_justify: false
 short_bio: >-
- <p>
-    Hi, my name is Zhipeng Xie. Welcome to my homepage. I received my bachelor's degree
-    from Shanghai Maritime University. During the fourth year of my undergraduate study,
-    I worked as a research assistant at Zhejiang University for one year, where I gained
-    research experience in AI agent and Robotics Learning.
-    Currently, I am a master's student at East China Normal University, advised by Jing Zhao. My research
-    interests include robotics, Embodied AI, Multimodal Large Language Model, and World Action Model. I am particularly interested in building intelligent
-    agents and robotic systems that can perceive, reason, and act in complex
-    real-world environments. Welcome to reach out to me for communication and collaboration!
-  </p>
+  <p>
+     Hi, my name is Zhipeng Xie. Welcome to my homepage. I received my bachelor's degree
+     from Shanghai Maritime University. During the fourth year of my undergraduate study,
+     I worked as a research assistant at Zhejiang University for one year, where I gained
+     research experience in AI agent and Robotics Learning.
+     Currently, I am a master's student at East China Normal University, advised by Jing Zhao. My research
+     interests include robotics, Embodied AI, Multimodal Large Language Model, and World Action Model. I am particularly interested in building intelligent
+     agents and robotic systems that can perceive, reason, and act in complex
+     real-world environments. Welcome to reach out to me for communication and collaboration!
+   </p>
 portrait_url: /assets/images/photos/profile.jpg
 portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
@@ -51,6 +51,7 @@ education:
 
 experience:
   - name: Zhejiang University
+    logo: /assets/images/badges/ZJU.png
     position: >-
       Research Assistant
     date: Sep.2024 - Sep. 2025
