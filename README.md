@@ -21,3 +21,5 @@ Clone this repository, navigate to the root directory, and execute:
 ```bash
 bundle exec jekyll serve
 ```
+
+# Based on the wonderful **academic-homepage**[https://github.com/luost26/academic-homepage](https://github.com/luost26/academic-homepage) by Shitong Luo, customized by Zhipeng Xie.
