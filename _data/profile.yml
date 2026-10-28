@@ -35,11 +35,11 @@ portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
-  - name: East China Normal University
+  - name: East China Normal University 华东师范大学
     logo: /assets/images/badges/ECNU.png
     position: >-
-      School of Computer Science and Technology <br/>
-      M.S. Student
+      School of Computer Science and Technology, Computer Science and Technology <br/>
+      计算机科学与技术学院 · 计算机科学与技术 · 硕博连读 (M.S.-Ph.D. Program)
     date: Sep. 2025 - present
 
   - name: Shanghai Maritime University
@@ -50,15 +50,20 @@ education:
     date: Sep. 2021 - Jun. 2025
 
 experience:
-  - name: Zhejiang University
+  - name: Shanghai Jushen Technology Co., Ltd. (Shanghai)
+    position: >-
+      VLA/WAM Algorithm Engineer
+    date: Jul. 2026 - present
+
+  - name: Zhejiang University (Hangzhou)
     logo: /assets/images/badges/ZJU.png
     position: >-
-      Research Assistant
-    date: Sep.2024 - Sep. 2025
+      LLM Algorithm Engineer
+    date: Sep. 2024 - Aug. 2025
 
 academic_service:
-  - "Conference reviewer: IJCAI 2026,"
-  - "Journal reviewer: Pattern Recognition,"
+  - "Program Committee Member / Reviewer (2025 - present): ICLR, AAAI, IJCAI"
+  - "Journal Reviewer (2025 - present): Pattern Recognition (PR)"
 
 awards:
   - name: Shanghai Outstanding Graduate
