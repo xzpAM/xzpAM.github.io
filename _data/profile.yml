@@ -22,9 +22,11 @@ short_bio_text_justify: false
 short_bio: >-
   <p>
      Hi, I'm Zhipeng Xie (解志鹏), an M.S.-Ph.D. student at East China Normal University,
-     advised by Prof. Jing Zhao. My research focuses on Robotics, Embodied AI,
-     Multimodal Large Language Models, and World Models. Welcome to my homepage, and
-     feel free to reach out for discussion or collaboration!
+     advised by Prof. Jing Zhao. My research interests include Robotics, Embodied AI,
+     Multimodal Large Language Models, and World Models. I am particularly interested in
+     building intelligent agents and robotic systems that can perceive, reason, and act in
+     complex real-world environments. Welcome to my homepage, and feel free to reach out
+     for communication and collaboration!
    </p>
 portrait_url: /assets/images/photos/profile.jpg
 portrait_caption: >-
