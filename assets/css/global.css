@@ -1017,3 +1017,5 @@ img.profile-img,
     }
 }
 .footer-credit-nowrap{white-space:nowrap}
+
+.profile-portrait{display:block;width:100%;max-width:220px;margin:0 auto;border-radius:18px;object-fit:cover}.profile-portrait-mobile{display:inline-block;width:72%;max-width:220px;aspect-ratio:1;object-fit:cover}.profile-email-icon{font-size:.82em}
