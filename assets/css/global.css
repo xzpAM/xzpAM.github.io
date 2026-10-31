@@ -985,8 +985,3 @@ img.profile-img,
 }
 
 .profile-portrait{display:block;width:100%;max-width:220px;margin:0 auto;border-radius:18px;object-fit:cover}.profile-portrait-mobile{display:inline-block;width:72%;max-width:220px;aspect-ratio:1;object-fit:cover}.profile-email-icon{font-size:.82em}
-
-
-.zx-robot-mark:before{content:"";position:absolute;left:-4px;top:6px;width:2px;height:14px;background:#2bd9c3;box-shadow:0 0 8px #2bd9c3}.zx-robot-antenna{position:absolute;left:14px;top:-6px;width:1px;height:7px;background:#2bd9c3}.zx-robot-antenna:after{content:"";position:absolute;left:-2px;top:-3px;width:5px;height:5px;border-radius:50%;background:#f3c96a;box-shadow:0 0 7px #f3c96a}.zx-robot-eyes{display:inline-flex;gap:3px;margin-left:1px}.zx-robot-eyes i{display:block;width:4px;height:4px;border-radius:50%;background:#2bd9c3;box-shadow:0 0 5px #2bd9c3}.zx-robot-mark b{font-weight:800;letter-spacing:.1em}@media(max-width:575px){.zx-robot-mark{width:70px;height:26px;font-size:.75rem}}
-
-
