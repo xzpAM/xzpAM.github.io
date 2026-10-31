@@ -985,3 +985,5 @@ img.profile-img,
 }
 
 .profile-portrait{display:block;width:100%;max-width:220px;margin:0 auto;border-radius:18px;object-fit:cover}.profile-portrait-mobile{display:inline-block;width:72%;max-width:220px;aspect-ratio:1;object-fit:cover}.profile-email-icon{font-size:.82em}
+
+.navbar-name-arrow-mark{position:relative;display:inline-block;padding:0 .15rem .72rem 0;line-height:1}.navbar-name-arrow-mark strong{font-size:1.18rem;font-weight:700;white-space:nowrap}.navbar-name-arrow{position:absolute;left:66.666%;top:68%;font-size:1.15rem;color:#8a5a3b;transform:translate(4px,5px);line-height:1}@media(max-width:575px){.navbar-name-arrow-mark{padding-bottom:.58rem}.navbar-name-arrow-mark strong{font-size:1.04rem}.navbar-name-arrow{font-size:1rem;transform:translate(3px,4px)}}
