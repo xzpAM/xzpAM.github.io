@@ -726,39 +726,6 @@ footer small {
         font-size: 0.82rem;
     }
 }
-/* Navbar brand command-line prompt style */
-/* Navbar brand terminal-style mark */
-.navbar-brand::before {
-    content: ">_";
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0.65rem;
-
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 1rem;
-    font-weight: 800;
-    letter-spacing: -0.08em;
-
-    color: #000000;
-    background: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.85);
-    border-radius: 0.35rem;
-
-    width: 2rem;
-    height: 1.45rem;
-
-    box-shadow:
-        0 0 10px rgba(255, 255, 255, 0.22),
-        inset 0 0 0 1px rgba(0, 0, 0, 0.18);
-    vertical-align: middle;
-}
-
-/* Prevent old dot/icon from appearing on inner strong */
-.navbar-brand strong::before {
-    content: none !important;
-    display: none !important;
-}
 /* 只处理个人头像，不影响论文图片、项目图片 */
 /* =========================================================
    Smaller circular profile portrait
