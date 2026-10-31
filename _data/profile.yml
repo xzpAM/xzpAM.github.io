@@ -3,7 +3,7 @@ secondary_name: ""
 navbar_name: "Zhipeng Xie"
 
 positions:
-  - name: Embodied AI Researcher
+  - name: AI Agent Researcher
   - name: East China Normal University (ECNU)
     logo: /assets/images/badges/ECNU.png # Logo is optional
 
@@ -22,7 +22,7 @@ short_bio_text_justify: false
 short_bio: >-
   <p>
      Hi, I'm Zhipeng Xie (解志鹏), an M.S.-Ph.D. student at East China Normal University,
-     advised by Prof. Jing Zhao. My research interests include Robotics, Embodied AI,
+     advised by Prof. Jing Zhao. My research interests include Robotics, AI Agent,
      Large Language Models, and World Models. I am particularly interested in
      building intelligent agents and robotic systems that can perceive, reason, and act in
      complex real-world environments. Welcome to my homepage, and feel free to reach out
