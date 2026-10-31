@@ -975,7 +975,7 @@ img.profile-img,
 .profile-portrait{display:block;width:100%;max-width:220px;margin:0 auto;border-radius:18px;object-fit:cover}.profile-portrait-mobile{display:inline-block;width:72%;max-width:220px;aspect-ratio:1;object-fit:cover}.profile-email-icon{font-size:.82em}
 
 
-.navbar-brand{display:inline-flex;align-items:flex-end}.navbar-name-text{margin-right:.4em}.navbar-mouse-pointer{color:#8a5a3b;font-size:1rem;margin-bottom:-3px}@media(max-width:575px){.navbar-mouse-pointer{font-size:.9rem;margin-bottom:-2px}}
 
-/* Reference-style navbar identity: plain name with a separate pointer. */
+
+/* Single reference-style name and cursor. */
 .navbar-brand{display:inline-flex;align-items:flex-end;color:#fff!important;text-decoration:none}.navbar-brand strong{color:#fff!important;font-weight:800;letter-spacing:.02em;margin-right:.4em}.navbar-mouse-pointer{color:#8a5a3b;font-size:1rem;margin-bottom:-3px;line-height:1}@media(max-width:575px){.navbar-mouse-pointer{font-size:.9rem;margin-bottom:-2px}}
