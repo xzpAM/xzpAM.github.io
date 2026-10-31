@@ -168,18 +168,6 @@ a:focus {
     letter-spacing: 0.02em;
 }
 
-.navbar-brand strong::before {
-    content: "";
-    display: inline-block;
-    width: 0.65rem;
-    height: 0.65rem;
-    margin-right: 0.55rem;
-    border-radius: 50%;
-    background: #ffffff;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.36);
-    vertical-align: middle;
-}
-
 .navbar-nav .nav-link,
 .navbar-light .navbar-nav .nav-link {
     color: var(--text-muted) !important;
@@ -988,3 +976,6 @@ img.profile-img,
 
 
 .navbar-brand{display:inline-flex;align-items:flex-end}.navbar-name-text{margin-right:.4em}.navbar-mouse-pointer{color:#8a5a3b;font-size:1rem;margin-bottom:-3px}@media(max-width:575px){.navbar-mouse-pointer{font-size:.9rem;margin-bottom:-2px}}
+
+/* Reference-style navbar identity: plain name with a separate pointer. */
+.navbar-brand{display:inline-flex;align-items:flex-end;color:#fff!important;text-decoration:none}.navbar-brand strong{color:#fff!important;font-weight:800;letter-spacing:.02em;margin-right:.4em}.navbar-mouse-pointer{color:#8a5a3b;font-size:1rem;margin-bottom:-3px;line-height:1}@media(max-width:575px){.navbar-mouse-pointer{font-size:.9rem;margin-bottom:-2px}}
